@@ -6,7 +6,6 @@
 ## 运行方法
 需要本地服务器（file:// 协议下 fetch 会被浏览器拦截）：
 - VS Code 安装 Live Server 后：右键 index.html → Open with Live Server
-- 或执行 `python -m http.server 8000`，访问 http://localhost:8000/integration/
 
 ## 目录说明
 integration/
