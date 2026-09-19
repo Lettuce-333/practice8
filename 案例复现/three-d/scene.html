@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园三维导览</title>
+  <script src="libs/aframe.min.js"></script>
+  <style>
+    .hud-title { position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+                 z-index: 9999; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.6);
+                 font: 500 16px/1.4 sans-serif; pointer-events: none; }
+    .back-link { position: fixed; top: 10px; left: 10px; z-index: 9999; }
+  </style>
+</head>
+<body>
+  <div class="hud-title">校园三维导览（拖动环视 · W/S/A/D 移动）</div>
+  <a class="back-link btn btn-light btn-sm" href="../index.html">← 返回首页</a>
+  <a-scene>
+    <a-sky color="#bfe3ff"></a-sky>
+    <a-plane rotation="-90 0 0" width="40" height="40" color="#7ec850" shadow></a-plane>
+    <a-plane rotation="-90 0 0" position="0 0.02 0" width="3" height="40" color="#95a5a6"></a-plane>
+    <a-box position="-6 2 -10" width="6" height="4" depth="4" color="#ffffff" shadow></a-box>
+    <a-box position="-6 4.2 -10" width="6.4" height="0.4" depth="4.4" color="#4a6fa5"></a-box>
+    <a-box position="6 3 -12" width="5" height="6" depth="4" color="#f4e9d8" shadow></a-box>
+    <a-box position="6 6.2 -12" width="5.4" height="0.4" depth="4.4" color="#c0392b"></a-box>
+    <a-box position="0 4 10" width="4" height="8" depth="4" color="#d9d9d9" shadow></a-box>
+    <a-cylinder position="2 1.5 2" radius="0.08" height="3" color="#555"></a-cylinder>
+    <a-sphere position="2 3.2 2" radius="0.3" color="#ffe08a"></a-sphere>
+    <a-cone position="9 1 -4" radius-bottom="0.6" radius-top="0.1" height="2" color="#2e8b57"></a-cone>
+    <a-cone position="-9 1 2" radius-bottom="0.6" radius-top="0.1" height="2" color="#2e8b57"></a-cone>
+    <a-cone position="3.5 1 -8" radius-bottom="0.6" radius-top="0.1" height="2" color="#2e8b57"></a-cone>
+    <a-camera position="0 1.6 6" look-controls="pointerLockEnabled: false"
+              wasd-controls="acceleration: 20"></a-camera>
+  </a-scene>
+</body>
+</html>
