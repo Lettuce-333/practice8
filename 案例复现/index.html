@@ -61,22 +61,53 @@
     </header>
     <section id="rooms" class="py-5">
       <div class="container">
-        <h2>自习室查询</h2>
-        <p class="text-muted">占位：第2步在此实现楼层／开放状态筛选列表。</p>
+        <h2 class="mb-4">自习室查询</h2>
+        <div class="form-row align-items-center mb-3">
+          <div class="col-6 col-md-3 mb-2 mb-md-0">
+            <label class="sr-only" for="floorFilter">按楼层筛选</label>
+            <select id="floorFilter" class="custom-select">
+              <option value="all">全部楼层</option>
+              <option value="1">1 楼</option>
+              <option value="2">2 楼</option>
+              <option value="3">3 楼</option>
+              <option value="4">4 楼</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-3">
+            <label class="sr-only" for="openFilter">按开放状态筛选</label>
+            <select id="openFilter" class="custom-select">
+              <option value="all">全部状态</option>
+              <option value="open">仅开放</option>
+              <option value="closed">仅关闭</option>
+            </select>
+          </div>
+          <div class="col-12 mt-2"><small class="text-muted" id="roomCount"></small></div>
+        </div>
+        <div id="roomList" class="row"></div>
       </div>
     </section>
     <section id="stats" class="py-5 bg-light">
       <div class="container">
-        <h2>使用统计</h2>
-        <p class="text-muted">占位：第2步在此加载 data.json 渲染使用量柱状图。</p>
+        <h2 class="mb-4">使用统计</h2>
+        <div id="statsLoading" class="text-center py-5">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p class="mt-2 text-muted">统计数据加载中…</p>
+        </div>
+        <div id="statsError" class="alert alert-danger d-none" role="alert">
+          统计数据加载失败：请确认通过本地服务器访问，且 data/data.json 存在。
+          <button id="statsRetry" class="btn btn-sm btn-danger ml-2">重试</button>
+        </div>
+        <div id="statsEmpty" class="alert alert-warning d-none">暂无统计数据</div>
+        <div id="statsChart" class="d-none" style="height: 420px;"></div>
       </div>
     </section>
   </main>
   <footer class="py-4 bg-dark text-white-50 text-center">
     <small>迷你版校园信息中心 · 前端技术整合案例复现 · 2026 秋季学期</small>
   </footer>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.5.1/echarts.min.js"></script>
+  <script src="libs/jquery-3.7.1.min.js"></script>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+  <script src="libs/echarts.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
