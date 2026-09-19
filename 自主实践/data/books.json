@@ -1,0 +1,8 @@
+[
+  { "id": 1, "title": "三体", "author": "刘慈欣", "category": "科幻", "status": "done", "month": 3 },
+  { "id": 2, "title": "活着", "author": "余华", "category": "文学", "status": "done", "month": 5 },
+  { "id": 3, "title": "人类简史", "author": "尤瓦尔·赫拉利", "category": "历史", "status": "reading", "month": "" },
+  { "id": 4, "title": "JavaScript高级程序设计", "author": "Matt Frisbie", "category": "编程", "status": "done", "month": 7 },
+  { "id": 5, "title": "万历十五年", "author": "黄仁宇", "category": "历史", "status": "wish", "month": "" },
+  { "id": 6, "title": "球状闪电", "author": "刘慈欣", "category": "科幻", "status": "wish", "month": "" }
+]
