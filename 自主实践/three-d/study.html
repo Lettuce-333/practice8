@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三维书房</title>
+  <script src="libs/aframe.min.js"></script>
+  <style>
+    .hud-title { position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+                 z-index: 9999; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,.6);
+                 font: 500 16px/1.4 sans-serif; pointer-events: none; }
+    .back-link { position: fixed; top: 10px; left: 10px; z-index: 9999; }
+  </style>
+</head>
+<body>
+  <div class="hud-title">我的三维书房（拖动环视 · W/S/A/D 移动）</div>
+  <a class="back-link btn btn-light btn-sm" href="../index.html">← 返回书架</a>
+  <a-scene>
+    <a-sky color="#d9ecf5"></a-sky>
+    <a-plane rotation="-90 0 0" width="30" height="30" color="#c8a67a"></a-plane>
+
+    <!-- 书架框架：两块立板 + 四层隔板 -->
+    <a-box position="-3.1 2 0"  width="0.2" height="4" depth="1.2" color="#8b5a2b"></a-box>
+    <a-box position="3.1 2 0"   width="0.2" height="4" depth="1.2" color="#8b5a2b"></a-box>
+    <a-box position="0 4.05 0"  width="6.4" height="0.15" depth="1.2" color="#8b5a2b"></a-box>
+    <a-box position="0 3 0"     width="6"   height="0.1"  depth="1.2" color="#a06a35"></a-box>
+    <a-box position="0 2 0"     width="6"   height="0.1"  depth="1.2" color="#a06a35"></a-box>
+    <a-box position="0 1 0"     width="6"   height="0.1"  depth="1.2" color="#a06a35"></a-box>
+    <a-box position="0 0.05 0"  width="6.4" height="0.15" depth="1.2" color="#8b5a2b"></a-box>
+
+    <!-- 第一层书 -->
+    <a-box position="-2.6 3.55 0" width="0.3" height="0.85" depth="0.9" color="#5470c6"></a-box>
+    <a-box position="-2.2 3.55 0" width="0.3" height="0.85" depth="0.9" color="#ee6666"></a-box>
+    <a-box position="-1.8 3.55 0" width="0.3" height="0.85" depth="0.9" color="#91cc75"></a-box>
+    <a-box position="-1.3 3.6 0"  width="0.3" height="0.95" depth="0.9" color="#fac858"></a-box>
+    <a-box position="-0.9 3.55 0" width="0.3" height="0.85" depth="0.9" color="#73c0de"></a-box>
+    <a-box position="1.2 3.55 0"  width="0.3" height="0.85" depth="0.9" color="#3ba272"></a-box>
+    <a-box position="1.6 3.6 0"   width="0.3" height="0.95" depth="0.9" color="#fc8452"></a-box>
+    <a-box position="2.0 3.55 0"  width="0.3" height="0.85" depth="0.9" color="#9a60b4"></a-box>
+
+    <!-- 第二层书 -->
+    <a-box position="-2.4 2.55 0" width="0.3" height="0.85" depth="0.9" color="#ea7ccc"></a-box>
+    <a-box position="-2.0 2.6 0"  width="0.3" height="0.95" depth="0.9" color="#5470c6"></a-box>
+    <a-box position="-1.5 2.55 0" width="0.3" height="0.85" depth="0.9" color="#91cc75"></a-box>
+    <a-box position="0.8 2.6 0"   width="0.3" height="0.95" depth="0.9" color="#fac858"></a-box>
+    <a-box position="1.2 2.55 0"  width="0.3" height="0.85" depth="0.9" color="#ee6666"></a-box>
+    <a-box position="2.3 2.55 0"  width="0.3" height="0.85" depth="0.9" color="#73c0de"></a-box>
+
+    <!-- 第三层书 -->
+    <a-box position="-1.9 1.55 0" width="0.3" height="0.85" depth="0.9" color="#3ba272"></a-box>
+    <a-box position="-1.4 1.6 0"  width="0.3" height="0.95" depth="0.9" color="#9a60b4"></a-box>
+    <a-box position="1.7 1.55 0"  width="0.3" height="0.85" depth="0.9" color="#fc8452"></a-box>
+    <a-box position="2.1 1.6 0"   width="0.3" height="0.95" depth="0.9" color="#5470c6"></a-box>
+
+    <!-- 阅读角：地毯 + 落地灯 -->
+    <a-plane rotation="-90 0 0" position="0 0.02 3" width="3" height="2" color="#e8d9b5"></a-plane>
+    <a-cylinder position="2.6 1 3" radius="0.06" height="2" color="#555"></a-cylinder>
+    <a-cone position="2.6 2.2 3" radius-bottom="0.35" radius-top="0.1" height="0.4" color="#ffdfa0"></a-cone>
+    <a-sphere position="2.6 2.05 3" radius="0.12" color="#fff3c4" light="color: #ffe9b0; intensity: 1.2"></a-sphere>
+
+    <a-camera position="0 1.6 6" look-controls="pointerLockEnabled: false"
+              wasd-controls="acceleration: 20"></a-camera>
+  </a-scene>
+</body>
+</html>
